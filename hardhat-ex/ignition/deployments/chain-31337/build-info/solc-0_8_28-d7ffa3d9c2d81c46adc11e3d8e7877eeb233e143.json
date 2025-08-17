@@ -1,0 +1,39 @@
+{
+  "_format": "hh3-sol-build-info-1",
+  "id": "solc-0_8_28-d7ffa3d9c2d81c46adc11e3d8e7877eeb233e143",
+  "solcVersion": "0.8.28",
+  "solcLongVersion": "0.8.28+commit.7893614a",
+  "userSourceNameMap": {
+    "contracts/GuestBook.sol": "project/contracts/GuestBook.sol"
+  },
+  "input": {
+    "language": "Solidity",
+    "settings": {
+      "evmVersion": "cancun",
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "": [
+            "ast"
+          ],
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers",
+            "metadata"
+          ]
+        }
+      },
+      "remappings": []
+    },
+    "sources": {
+      "project/contracts/GuestBook.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.28;\r\n\r\ncontract Guestbook {\r\n    //Struct ini mendefinisikan struktur data setiap pesan\r\n    struct Message {\r\n        address sender;\r\n        string text;\r\n        uint256 timestamp;\r\n    }\r\n\r\n    //Array untuk menyimpan semua pesan yang masuk\r\n    Message[] public messages;\r\n\r\n    event NewMessage(address indexed from, uint256 timestamp, string text);\r\n\r\n    /**\r\n    * @dev Fungsi untuk mengirim pesan ke guestbook.\r\n    * Membutuhkan transaksi\r\n    */\r\n\r\n    function postMessage(string memory _text) public {\r\n        // Memastikan pesan tidak kosong\r\n        require(bytes(_text).length > 0, \"Message tidak boleh kosong.\");\r\n\r\n        // Membuat instance Message baru di memory dan menyimpannya ke array 'messages'\r\n        messages.push(Message(msg.sender, _text, block.timestamp));\r\n\r\n        // Memancarkan event NewMessage\r\n        emit NewMessage(msg.sender, block.timestamp, _text);\r\n    }\r\n\r\n    /**\r\n     * @dev Fungsi untuk ngambil semua pesan yang ada di guestbook.\r\n     * <no gas fee>\r\n     */\r\n    function getMessages() public view returns (Message[] memory) {\r\n        return messages;\r\n    }\r\n}"
+      }
+    }
+  }
+}
