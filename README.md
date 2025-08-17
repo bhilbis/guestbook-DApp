@@ -94,14 +94,6 @@ npm run dev
 Frontend will be available at:  
 👉 http://localhost:5173
 
----
-
-## ⚡ Environment Variables
-Create `.env` file in `guestbook-frontend/` with:
-```bash
-VITE_CONTRACT_ADDRESS=<your_deployed_contract_address>
-VITE_NETWORK=localhost
-```
 
 ---
 
