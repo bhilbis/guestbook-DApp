@@ -97,7 +97,8 @@ Frontend will be available at:
 ---
 
 ## 📸 Screenshots
-<img width="1911" height="981" alt="{981D3382-A708-43C3-9C78-98B07FD846AE}" src="https://github.com/user-attachments/assets/83bd83ba-5d6f-453c-b7a5-0dde54b7dff6" />
+<img width="1910" height="983" alt="{D2FB91D0-18EB-4745-9C69-02B039B4E811}" src="https://github.com/user-attachments/assets/88bf4120-94be-47b9-876d-6ee573e00369" />
+
 
 
 ---
