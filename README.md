@@ -30,7 +30,6 @@ Users can write and view messages stored securely on the blockchain.
 ---
 
 ## 📂 Project Structure
-## 📂 Project Structure
 ```plaintext
 .
 ├── guestbook-frontend     # React + TS + Tailwind frontend
